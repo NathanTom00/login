@@ -4,31 +4,14 @@
     La homepage ha un h2 del tipo "welcome utente" se si  è loggati
 -->
 <mat-toolbar color="primary">
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>share</mat-icon>
-  </button>
+  <span>Home</span>
+  <span class="spacer"></span>
+  <button mat-flat-button color="transparent"  style="margin-right: 5px;" aria-label="login button" routerLink="login"> Log In </button>
+  <button mat-flat-button color="transparent" aria-label="signup button" routerLink="register"> Register</button>
 </mat-toolbar>
 
 <div class="container">
-  <router-outlet></router-outlet>
+    <div class="sub-container">
+        <router-outlet></router-outlet>
+    </div>
 </div>
