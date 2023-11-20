@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.panel{
+    width: 25vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    border-radius: 2%;
+    border-style: solid;
+    border-width: thin;
+    border-color: grey;
+    justify-content: space-evenly;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+mat-form-field{
+    width: 80%;
+}

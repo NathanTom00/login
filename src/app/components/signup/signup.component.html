@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="panel">
+        <div class="row" >
+            <h1>Sign Up</h1>
+        </div>
+        <form [formGroup]="formSignUp" (ngSubmit)="onSubmit()" >
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="formSignUp.get('email')?.hasError('email') && !formSignUp.get('email')?.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="formSignUp.get('email')?.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" >
+                    <mat-error *ngIf="formSignUp.get('password')?.hasError('required')">
+                      Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <button mat-button color="primary" type="submit" [disabled]="!formSignUp.valid">
+                    Registrati
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</div>
